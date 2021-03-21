@@ -12,11 +12,11 @@ const validates = handleActions({
             { id: 2, inner:{ text: 'Сына первого' }, children: []},
             { id: 3, inner:{ text: 'Второй сына первого' }, children: [
                 { id: 4, inner:{ text: 'Сына второго сына первого' }, children: [
-                    { id: 6, inner:{ text: 'Третий сына первого' }, children: [
-                        { id: 7, inner:{ text: 'Третий сына первого' }, children: [] },
+                    { id: 6, inner:{ text: 'Сына первого сына второго сына первого' }, children: [
+                        { id: 7, inner:{ text: 'Сына первого сына первого сына второго сына первого' }, children: [] },
                     ]}
                 ]},
-                { id: 8, inner:{ text: 'Третий сына первого1' }, children: []}
+                { id: 8, inner:{ text: 'Второй сына второго сына первого' }, children: []}
             ]},
             { id: 5, inner:{ text: 'Третий сына первого' }, children: [] },
         ] }
