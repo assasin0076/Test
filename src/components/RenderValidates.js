@@ -86,26 +86,13 @@ const mapStateToProps = (state) => {
 // }
 
 const RenderValidates = ({ validates }) => {
-    const { byId, allIds } = validates;
-    
-    const tree = makeTree(validates)
-
-    console.log(tree)
-
+    const { tree } = validates;
+    const { inner, children } = tree[0];
     
 
-    return validates.allIds.map((el) => {
-        return <Validate data={validates.byId[el]}/>
-    })
+
+    return <Validate inner={inner} children={children}/>
 }
 
 export default connect(mapStateToProps, actionCreators)(RenderValidates);
 
-
-[
-    {
-        content: {}, id: 1, children: [
-            {content: {}, id: 2, children: []}
-        ]
-    }
-]
