@@ -14,17 +14,21 @@ const mapStateToProps = (state) => {
     }
 };
 
-const Validate = ({ doValidate, validates, children, data }) => {
+const Validate = ({ doValidate, inner, children, data }) => {
+    
+    const container = React.useRef(null);
 
-    const validate = (e) => {
-        console.log(data)
+    const validate = () => (e) => {
+        console.log(e.target.parentNode.childNodes)
     }
-    console.log(data)
     return (
-        <div className='block p-2 m-3'>
-            <p className='hovered' onClick={validate}>ValidateComp</p>
-            {children}
-            <p>{data.inner.text}</p>
+        <div ref={container} className='block p-2 m-3'>
+            <p className='hovered' onClick={validate()}>ValidateComp</p>
+            {children.length === 0 ? '' : children.map(child => {
+                return <Validate inner={child.inner} children={child.children}/>
+            })}
+            
+            <p>{inner.text}</p>
         </div>
     );
 };
