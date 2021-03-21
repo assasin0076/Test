@@ -3,6 +3,15 @@
 }
 
 .hovered {
+    color: rgb(245, 60, 106);
+    cursor: pointer;
+    &:hover {
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.hovered-changed {
+    color: rgb(250, 29, 165);
     cursor: pointer;
     &:hover {
         text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);

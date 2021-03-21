@@ -19,8 +19,7 @@ const validates = handleActions({
                 { id: 8, inner:{ text: 'Третий сына первого1' }, children: []}
             ]},
             { id: 5, inner:{ text: 'Третий сына первого' }, children: [] },
-        ] },
-        { id: 8, inner:{ text: 'Третий сына первого1' }, parId: 3 },
+        ] }
     ],
 });
 
